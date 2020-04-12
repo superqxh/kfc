@@ -1,0 +1,131 @@
+
+.content.data-v-19e04489{
+	width: 100%;
+	height: 100%;
+	background: #FAFAFA;
+}
+.status-box.data-v-19e04489{
+	width: 100%;
+	height: 400rpx;
+	background: #FFFFFF;
+}
+.status.data-v-19e04489{
+	width: 100%;
+	height: 100rpx;
+	line-height: 100rpx;
+	padding-top: 150rpx;
+	text-align: center;
+	color: #BF212E;
+	font-weight: bold;
+}
+.again.data-v-19e04489{
+	height: 50rpx;
+	margin: 50rpx 40%;
+	width: 20%;
+	background: #BF212E;
+	color: #FFFFFF;
+	line-height: 50rpx;
+	font-size: 25rpx;
+	text-align: center;
+	border-radius: 10rpx;
+}
+.box.data-v-19e04489{
+	margin-top: 10rpx;
+	background: #FFFFFF;
+	width: 100%;
+}
+.title.data-v-19e04489{
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 22rpx;
+	color: #888888;
+	padding-left:20rpx;
+	border-bottom:1px solid #cccccc;
+}
+.item.data-v-19e04489{
+	width:100%;
+	height:60rpx;
+	padding:10rpx;
+}
+.img.data-v-19e04489{
+	float:left;
+	margin-left:20rpx;
+	width: 60rpx;
+	height: 60rpx;
+}
+.name.data-v-19e04489{
+	float: left;
+	margin-left: 20rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 30rpx;
+}
+.price.data-v-19e04489{
+	margin-right: 20rpx;
+	float:right;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 35rpx;
+	font-weight: bold;
+}
+.number.data-v-19e04489{
+	margin-right: 20rpx;
+	float:right;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 30rpx;
+	color: #888888;
+}
+.icon.data-v-19e04489{
+	font-size: 20rpx;
+}
+.total.data-v-19e04489{
+	border-top:1px solid #cccccc;
+	height: 70rpx;
+	padding:10rpx 0;
+	line-height: 70rpx;
+}
+.total-money.data-v-19e04489{
+	float: right;
+	margin-right: 20rpx;
+	font-size: 40rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #BF212E;
+}
+.total-number.data-v-19e04489{
+	float: right;
+	margin-right: 20rpx;
+	font-size: 35rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #666666;
+}
+.info-item.data-v-19e04489{
+	padding:10rpx 0;
+	overflow:hidden;
+}
+.text.data-v-19e04489{
+	float: left;
+	height: 70rpx;
+	line-height: 70rpx;
+	margin-left:20rpx;
+	font-size: 30rpx;
+}
+.cont.data-v-19e04489{
+	float: right;
+	line-height: 70rpx;
+	margin-right:20rpx ;
+	color: #888888;
+	font-size: 25rpx;
+	width:70%;
+	text-align: right;
+}
+.copy.data-v-19e04489{
+	float: right;
+	margin: 0 10rpx;
+	line-height: 70rpx;
+	font-size: 30rpx;
+	color: #000000;
+}
+

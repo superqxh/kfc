@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "index-nav": "/components/index/index-nav",
+    "index-tab": "/components/index/index-tab",
+    "index-scroll": "/components/index/index-scroll",
+    "index-swiper": "/components/index/index-swiper",
+    "index-show": "/components/index/index-show"
+  }
+}

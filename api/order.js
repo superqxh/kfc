@@ -1,0 +1,521 @@
+import Get from "@/common/get.js"
+import Post from "@/common/post.js"
+
+
+/* 
+ 获取订单列表
+ path：/api/order/list
+ method:get
+ body:{
+	 非必填
+	 type：------订单状态
+	 page------分页参数起始值（默认从0查询所有）
+	 limit------分页数步长值
+	 search-----搜索订单编号
+ }
+ data{
+	 add_time-----下单时间
+	 seckill_id------秒杀产品编号
+	 bargain_id------砍价产品编号
+	 combination_id------拼团产品编号
+	 id------订单编号
+	 order_id-----订单号
+	 pay_price----支付金额
+	 total_num-----订单商品总数
+	 total_price----订单总价
+	 pay_postage-----支付邮费
+	 total_postage----邮费
+	 paid-----支付状态|1=已支付，0=未支付
+	 status-----订单状态|0=待发货，1=待收货，2=待评价，3=已完成
+	 refund_status-----退款状态|0=未退款，1=申请中，2=已退款
+	 pay_type-----支付方式
+	 coupon_price-----优惠券金额
+	 deduction_price-----抵扣金额
+	 pink_id----拼团那编号
+	 delivery_type-------发货类型|send=送货，express=发货
+	 is_del--------用户订单是否删除|1=是，0=否
+	 cartInfo{------购物车信息
+		 uid-----用户编号
+		 id---购物车编号
+		 type----产品类型（默认product）
+		 peoduct_id----普通产品编号
+		 product_attr_unique-------产品属性
+		 cart_num----购物车数量
+		 add_time-----添加购物车时间
+		 is_pay-----是否下单|1=是，0=否
+		 is_del-----是否删除|0=是，1=否
+		 is_new-----购买方式|1=直接购买，0=购物车购买
+		 seckill_id------秒杀产品编号
+		 bargain_id------砍价产品编号
+		 combination_id------拼团产品编号
+		 productInfo{----购物车产品详情信息
+			 id---产品id
+			 image-----产品图片
+			 slider_image---产品轮播图
+			 price-------产品售价
+			 ot_prict---市场价
+			 vip_price------会员价
+			 postage------是否包邮|1=是，0=否
+			 mer_id-------商户编号
+			 give_integral------赠送积分
+			 cate_id-----产品分类编号
+			 sales-------销量
+			 stock-----库存
+			 store_name----名称
+			 store_info-----简介
+			 unit_name------单位
+			 is_show-----是否显示|1=显示，0=隐藏
+			 is_del-----是否删除|1=隐藏，0=显示
+			 is_postage-----是否包邮|1=是，0=否
+			 cost-----产品成本
+			 attrInfo{-----产品属性
+				 product_id------产品编号
+				 suk------产品属性索引值
+				 stock------产品属性库存
+				 sales------产品属性销量
+				 price------产品属性价格
+				 image------产品属性图片
+				 unique------产品属性唯一值
+				 cost------产品属性成本价
+			 }
+		 }
+		 truePrice------购物车产品支付金额
+		 vip-truePrice------购物车产品会员支付金额
+		 trueStock------物车产品库存
+		 costPrice------物车产品成本价
+		 unique------购物车和订单号MD5加密的唯一值
+		 is_reply------是否评价|1=是，0=f 
+	 }
+	 _status{-----订单状态信息
+	 			 _type------订单状态
+	 			 _title------订单的状态标题
+	 			 _msg------订单的状态说明
+	 			 _class------订单的状态样式
+	 			 _payType------订单支付方式
+	 			 -deliveType------订单的发货类型
+	 }
+	 _pay_time------支付时间
+	 _add_time------下单时间
+	 _status_pic------订单的状态图片
+ }
+ */
+export function orderList(data){
+	return Get.urlRequest("/api/order/list",data)
+}
+
+
+
+/* 
+订单创建
+path：/api/ordere/create/:key
+method:post
+路径参数：
+key-------订单信息缓存标识
+ body{
+	 必须参数
+	 addressId----地址编号
+	 couponId----领取优惠券编号
+	 payType----支付方式
+	 mark------订单备注
+	 非必须
+	 useIntegral----是否积分抵扣
+	 combinationId-----砍价产品编号
+	 pinkId--------拼团编号
+	 seckill_id-----秒杀产品编号
+	 formId-----表单id（小程序模板消息使用）
+	 bargainId------砍价产品编号
+	 from-----支付类型
+ }
+ data{
+	 status----状态
+	 result{
+		 orderId----订单编号
+		 key----购物车缓存key
+		 jsConfig{------微信支付参数
+			 appId----appId
+			 nonceStr----随机字符串
+			 package-----统一下单接口返回的prepay_id参数值
+			 signType------签名类型
+			 paySign------签名
+			 timestamp----时间戳
+		 }
+		 
+	 }
+ }
+ 
+ */
+export function orderCreate(key,data){
+	return Post.urlRequest("/api/order/create/"+key,data)
+}
+
+
+/* 
+ 订单取消
+ path：/api/order/cancel
+ method:post
+ body{
+	 id-------订单编号
+ }
+ data{
+ }
+ */
+export function orderCancel(data){
+	return Post.urlRequest("/api/order/cancel",data)
+}
+/* 
+ 订单收货
+ path：/api/order/take
+ method:post
+ body{
+	 uni-------订单编号
+ }
+ data{
+ }
+ */
+export function orderTake(data){
+	return Post.urlRequest("/api/order/take",data)
+}
+
+/* 
+ 订单产品信息
+ path：/api/order/product
+ method:post
+ body{
+	 unique-------购物车和订单编号MD5加密唯一值（订单详情接口返回的数据内cartInfo）
+ }
+ data{
+	 cartProduct{-----购物车产品信息
+		 cart_num-----购买数量
+		 productInfo{------产品信息
+			 image-----产品图片
+			 price-----产品价格
+			 store_name-----产品名称
+			 attrInfo{----产品属性
+				 product_id ------产品编号
+				 suk------属性名称
+				 price-----属性价格
+				 image---属性图片
+				 
+			 }
+		 }
+		 product_id------产品编号
+		 combination_id------拼团产品编号
+		 seckill_id------秒杀品编号
+		 bargain_id------砍价产品编号
+		 
+	 }
+	 
+ }
+ */
+export function orderProduct(data){
+	return Post.urlRequest("/api/order/product",data)
+}
+
+
+/* 
+ 订单详情
+ path：/api/order/detail/:uni
+ method:get
+ 路径参数：{
+	 uni-----订单编号
+ }
+ body{
+ }
+ data{
+	 id----订单编号
+	 order_id----订单号
+	 uid-----用户编号
+	 real_name------用户名称
+	 user_phone-----用户手机号
+	 user_address----用户地址
+	 cart_id----购物车编号 
+	 freight_price-----运费金额
+	 total_num----订单商品总数
+	 total_price-----订单总价
+	 totlal_postage-----邮费
+	 pay_price-----实际支付金额
+	 pay_postage------支付邮费
+	 deduction_price----抵扣金额
+	 coupon_price-----优惠券id
+	 coupon_price-----优惠券金额
+	 paid------支付状态|1=已支付，0=未支付
+	 pay_time------支付时间
+	 pay_type----支付方式|weixin=微信支付，yue=余额支付，offline=线下支付
+	 add_time----下单时间
+	 status------订单状态|0=待发货，1=待收货，2=待评价，3=已完成
+	 refund_status----退款状态|0=未退款，1=申请中，2=已退款
+	 refund_reason_wap_img---退款图片
+	 refund_reason_wap_explain---退款用户说明
+	 refund_reason_time-----退款时间
+	 refund_reason_wap----前台退款原因
+	 refund_reason-----不退款理由
+	 delivery_name------快递名称/送货人姓名
+	 delivery_type-----发货类型|send=送货，express=发货
+	 delivery_id----快递单号/手机号
+	 gain_integral----消费赚取积分
+	 use_integral----使用积分
+	 back_integral---退回积分
+	 mark----------（用户）订单备注
+	 is_del-----用户订单是否删除|1=是，0=否
+	 unique------MD5加密唯一值
+	 remark-------（后台）订单备注
+	 mer_id-----商户编号
+	 combination_id------拼团产品编号
+	 pink_id-----拼团编号
+	 cost-----订单产品成本价
+	 seckill_id-----秒杀产品编号
+	 bargain_id---砍价产品编号
+	 is_channel------支付渠道（0微信公众号，1微信小程序）
+	 is_remind-----新订单提醒|1=是，0=否
+	 is_system_del-----厚爱订单删除|1=是，0=否
+	 add_time_y----下单日期（年月日）
+	 add_time_h----下单时间（时分秒）
+	 cartInfo{----购物车信息
+		 id----购物车编号
+		 uid---用户编号
+		 type-----产品类型（默认product）
+		 product_id-------普通产品编号
+		 product_attr_unique-----产品属性
+		 cart_num-----购物车数量
+		 add_time---添加购物车时间
+		 is_pay-----是否下单|1=是，0=否
+		 is_del----是否删除|0=是，1=否
+		 is_new-----购买方式|1=直接购买，0=购物车购买
+		 combination_id-----拼团产品编号
+		 seckill_id----秒杀产品编号
+		 bargain_id---砍价产品编号
+		 productInfo{---购物车产品详细信息
+			 id----产品id
+			 image---产品图片
+			 slider_image------产品轮播图
+			 price----产品售价
+			 ot_price---产品市场价
+			 vip_price----会员价
+			 postage-----是否包邮|1=是，0=否
+			 mer_id---商户编号
+			 give_integral-----赠送积分
+			 cate_id----产品分类编号
+			 sales-----产品销量
+			 stock-----产品库存
+			 store_name-----产品名称
+			 sTore_info-----产品简介
+			 unit_name-----产品单位
+			 is_show-----是否显示|1=显示，0=隐藏
+			 is_del-----是否删除|0是，1=否
+			 is_postage-----是否包邮|1=是，0=否
+			 cost-----产品成本价
+			 attrInfo{---产品属性
+				 product_id----产品编号
+				 suk----产品属性索引值
+				 stock----产品属性库存
+				 sales---产品属性销量
+				 price----产品属性价格
+				 image----产品属性图片
+				 unique----产品属性唯一值
+				 cost------产品属性成本价
+			 } 
+		 }
+		 truePrice-----购物车产品支付金额
+		 vip_truePrice-----购物车产品会员支付金额
+		 trueStock-----购物车产品库存
+		 costPrice-----购物车产品成本价
+		 unique----购物车和订单号MD5加密唯一值
+		 is_reply----是否评价|1=是，0=否
+	 }
+	 _status{----订单状态信息
+		 _type-----订单状态
+		 _title-----订单状态标题
+		 _msg----订单状态说明
+		 _class----订单状态样式
+		 _payType---订单支付方式
+		 _deliveryType----订单发货类型
+	 }
+	 _pay_time---支付时间
+	 _add_time----下单时间
+	 status_pic-----订单状态图片
+ }
+ */
+export function orderDetail(id){
+	return Get.urlRequest('/api/order/detail/'+id)
+}
+
+/* 
+ 计算订单金额
+ path：/api/order/computed/:key
+ method:post
+ 路径参数{
+	 key-----订单信息缓存标识
+ }
+ body{
+	 addressId----地址编号
+	 couponId---领取优惠券编号
+	 payType---支付方式
+	 useIntegral----是否积分抵扣
+ }
+ data{
+	 price----订单金额
+ }
+ */
+export function orderComputed(key,data){
+	return Post.urlRequest('/api/order/computed/'+key,data)
+}
+
+
+/* 
+ 再次下单
+ path：/api/order/again
+ method:post
+ body{
+	 uni--------订单编号
+ }
+ data{
+	 cateId-----购物车编号
+ }
+ */
+export function orderAgain(data){
+	return Post.urlRequest("/api/order/again",data)
+}
+
+
+/* 
+订单确认
+path：/api/order/confirm
+method:post
+body{
+	cartId------购物车编号（多个购物车的话，用英文字符逗号隔开）
+}
+data{
+	usbleCoupon{------可使用的优惠券（如果没有返回null）
+		id------领取优惠券编号
+		cid----优惠券编号
+		uid----用户编号
+		coupon_title----优惠券名称
+		coupon_price----优惠券抵扣金额
+		add_time----优惠券领取时间
+		end_time---优惠券结束时间
+		use_time----优惠券使用时间
+		type------优惠券获取方式|get=前台领取，send=后台发放
+		status-----优惠券状态|0=未使用，1=已使用，2=已过期
+		is_fail-----优惠券是否有效
+	}
+	offline_pay_status-----线下支付状态|1=开启，2=关闭
+	seckill_id-----秒杀产品编号
+	cartInfo{-----购物车信息
+		id-----购物车编号
+		uid-----用户编号
+		type----产品类型（默认product）
+		product_id-----普通产品编号
+		product_attr_unique------产品属性
+		cart_num-----购物车数量
+		add_time-----添加购物车时间
+		is_pay----是否下单|1=是，0=否
+		is_del----是否删除|0=是，1=否
+		is_new-----购买方式|1=直接购买，0=购物车购买
+		combination_id----拼团那产品编号
+		seckill_id-----秒杀产品编号
+		bargain_id-----砍价产品编号
+		productInfo{------购物车详细信息
+			id-------产品编号
+			image-----产品图片
+			slider_image----产品轮播图
+			price----产品售价
+			ot_price----产品市场价
+			vip_price----产品会员价
+			postage----是否包邮|1=是，0=否
+			mer_id----商户编号
+			give_integral-----赠送积分
+			cate_id----产品分类编号
+			sales-----产品销量
+			stock-----产品库存
+			store_name-----产品名称
+			store_info-----产品简介
+			unit_name-----产品单位
+			is_show---是否显示|1=显示，0=隐藏
+			is_del---是否删除|1=否，0=是
+			is_postage---是否包邮|1=是，0=否
+			cost----产品成本价
+		}
+		truePrice------购物车产品支付金额
+		vip_truePrice------购物车产品会员支付金额
+		trueStock-----产品库存
+		costPrice----购物车产品成本价
+	}
+	priceGroup{----金额信息
+		storePostage----邮费基础价
+		storeFreePostage------满额包邮
+		totalPrice----订单总金额
+		costPrice----订单成本价
+		vipPrice----订单会员优惠金额
+	}
+	orderKey------订单缓存标识
+	offlinePostage----线下支付是否包邮|0=否，1=是
+	userInfo{----用户信息
+		uid----用户编号
+		account----用户账号
+		real_name----用户姓名
+		birthday----用户生日
+		card_id----用户身份证号
+		mark-----用户备注
+		partner_id-----合伙人id
+		group_id-----用户分享组id
+		nickname---用户昵称
+		avatar----用户头像
+		phone----用户手机号
+		add_time---用户添加时间
+		add_ip---用户添加ip
+		last_time----用户最后一次登陆时间
+		last_ip---用户最后登录ip
+		now_money----用户余额
+		integral----用户积分
+		sign_num---连续签到天数
+		status-----用户状态|1=正常，0=禁止
+		level-----用户等级
+		spread_id------用户上级编号
+		spread_time------用户绑定上级时间
+		user_type-----用户类型
+		is_promoter---推广人权限|1=是，0=否
+		pay_count---用户支付次数
+		spread_count---用户下级推广人数
+		clean_time---清理会员时间
+		address---用户详细地址
+		vip-------会员状态
+		vip_id-----会员编号
+		discount---会员享受折扣
+	}
+	integralRatio------积分抵用比例
+	deduction-----是否营销产品|true=是，false=否
+}
+ */
+export function orderConfirm(data){
+	return Post.urlRequest("/api/order/confirm",data)
+}
+
+/* 
+ 
+ 订单支付
+ path：/api/order/pay
+ method:post
+ body{
+	 uni----订单编号
+	 from------支付类型|routine小程序，weixin=微信
+	 非必须
+	 paytype-------支付方式（默认微信支付）
+ }
+ data{
+	 status------状态
+	 result{
+		 jsConfig{-------支付参数
+			 appId------apppId
+			 nonceStr-------随机字符串
+			 package-----统一下单接口返回的prepay_id参数值
+			 signType-----签名类型
+			 paySign----签名
+			 timestamp-----时间戳
+		 }
+		 order_id-------订单编号
+	 }
+ }
+ */
+export function orderPay(data){
+	return Post.urlRequest("/api/order/pay",data)
+}

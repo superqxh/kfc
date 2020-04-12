@@ -1,0 +1,116 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	
+	{
+		"path": "pages/index/index",
+		"style": {
+			// "navigationBarTitleText": "uni-ap"
+		}
+	},
+	
+	
+	{
+	    "path" : "pages/login/login",
+	    "style" : {}
+	},
+	{
+		"path":"pages/register/register"
+	},
+	{
+	    "path" : "pages/confirm/confirm",
+	    "style" : {}
+	},
+	{
+	    "path" : "pages/menu/menu",
+	    "style" : {}
+	},
+	
+	{
+		"path" : "pages/payType/payType",
+		"style" : {}
+	},
+	
+
+	
+	{
+	    "path" : "pages/details/details",
+	    "style" : {}
+	},
+	
+	{
+	    "path" : "pages/mall/mall",
+	    "style" : {}
+	},
+	
+	{
+		"path" : "pages/order/order",
+		"style" : {}
+    },
+	{
+		"path" : "pages/personal/personal",
+		"style" : {}
+    }
+       
+        ,{
+            "path" : "pages/addAddress/addAddress",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/orderDetail/orderDetail",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/address/address",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/updateAddress/updateAddress",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/coupon/coupon",
+            "style" : {}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "kfc",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		//自定义头部
+		"navigationStyle":"custom"
+	},
+	"tabBar":{
+		"selectedColor":"#FF0000",
+		"backgroundColor":"#FFFFFF",
+		"borderStyle":"black",
+		"list":[
+	
+			
+			{
+				"iconPath":"static/img/tabbar/index.png",
+				"selectedIconPath":"static/img/tabbar/indexRed.png",
+				"pagePath":"pages/index/index",
+				"text":"首页"
+			},
+			{
+				"iconPath":"static/img/tabbar/mall.png",
+				"selectedIconPath":"static/img/tabbar/mallRed.png",
+				"pagePath":"pages/mall/mall",
+				"text":"商城"
+			},
+			{
+				"iconPath":"static/img/tabbar/order.png",
+				"selectedIconPath":"static/img/tabbar/orderRed.png",
+				"pagePath":"pages/order/order",
+				"text":"订单"
+			},
+			{
+				"iconPath":"static/img/tabbar/personal.png",
+				"selectedIconPath":"static/img/tabbar/personalRed.png",
+				"pagePath":"pages/personal/personal",
+				"text":"我的"
+			}
+		]
+	}
+}

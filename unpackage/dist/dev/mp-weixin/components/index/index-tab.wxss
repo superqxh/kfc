@@ -1,0 +1,12 @@
+
+.content.data-v-97b3f5e2{
+	height: 200rpx;
+	width: 100%;
+}
+.img.data-v-97b3f5e2{
+	width: 220rpx;
+	height: 160rpx;
+	border-radius: 20rpx;
+	margin: 20rpx 0 0 22.5rpx;
+}
+

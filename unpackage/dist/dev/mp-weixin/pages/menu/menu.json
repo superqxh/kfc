@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "mall-swiper": "/components/mall/mall-swiper",
+    "meun-list": "/components/meun/menu-list"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mall/mall",
+    "pages/order/order",
+    "pages/personal/personal"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "red",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "static/img/tabbar/index.png",
+        "selectedIconPath": "static/img/tabbar/indexRed.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/img/tabbar/mall.png",
+        "selectedIconPath": "static/img/tabbar/mallRed.png",
+        "pagePath": "pages/mall/mall",
+        "text": "商城"
+      },
+      {
+        "iconPath": "static/img/tabbar/order.png",
+        "selectedIconPath": "static/img/tabbar/orderRed.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath": "static/img/tabbar/personal.png",
+        "selectedIconPath": "static/img/tabbar/personalRed.png",
+        "pagePath": "pages/personal/personal",
+        "text": "我的"
+      }
+    ]
+  },
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "kfc",
+  "compilerVersion": "1.9.9",
+  "usingComponents": {}
+}

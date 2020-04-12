@@ -1,0 +1,1 @@
+<view class="content1 data-v-004b1167"><nav-t vue-id="1" title="订 单" class="data-v-004b1167" bind:__l="__l"></nav-t><order-nav vue-id="2" class="data-v-004b1167" bind:__l="__l"></order-nav><order vue-id="3" list="{{list}}" class="data-v-004b1167" bind:__l="__l"></order></view>

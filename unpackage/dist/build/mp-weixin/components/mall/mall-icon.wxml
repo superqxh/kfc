@@ -1,0 +1,1 @@
+<view class="content data-v-b43f620c"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index"><view class="item data-v-b43f620c"><image class="img data-v-b43f620c" src="{{item.img}}" mode></image><view class="text data-v-b43f620c">{{''+item.text+''}}</view></view></block></view>

@@ -1,0 +1,20 @@
+
+.content.data-v-3b3e666e{
+	width: 100%;
+	height: 300rpx;
+}
+.swiper.data-v-3b3e666e{
+	width: 100%;
+	height: 300rpx;
+}
+.swiper-item.data-v-3b3e666e{
+	margin: 20rpx 15rpx;
+	width: 670rpx;
+	height: 260rpx;
+}
+.img.data-v-3b3e666e{
+	width: 640rpx;
+	height: 240rpx;
+	border-radius: 20rpx;
+}
+

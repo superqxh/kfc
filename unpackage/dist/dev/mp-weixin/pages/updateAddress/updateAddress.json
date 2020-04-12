@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "nav-t": "/components/nav/nav"
+  }
+}

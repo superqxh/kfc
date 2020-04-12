@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "nav-t": "/components/nav/nav",
+    "order-nav": "/components/order/order-nav",
+    "order": "/components/order/order-list"
+  }
+}

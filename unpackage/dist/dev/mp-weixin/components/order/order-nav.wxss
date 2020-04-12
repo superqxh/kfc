@@ -1,0 +1,25 @@
+
+.content.data-v-7d39ef95{
+	width: 100%;
+	height: 75rpx;
+	/* background-color: red; */
+	background-color: #FFFFFF;
+}
+.item.data-v-7d39ef95{
+	height: 75rpx;
+	width: 25%;
+	float: left;
+}
+.test.data-v-7d39ef95{
+	margin: 0 auto;
+	text-align:  center;
+	font-size: 30rpx;
+	height: 70rpx;
+	line-height: 70rpx;
+	color: #666;
+}
+.selected.data-v-7d39ef95{
+	color: red;
+	border-bottom: 4rpx solid;
+}
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "uni-ap",
+  "usingComponents": {
+    "index-nav": "/components/index/index-nav"
+  }
+}

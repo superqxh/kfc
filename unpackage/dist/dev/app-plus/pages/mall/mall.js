@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"content.",[1],"data-v-3584c4c9{ height: ",[0,80],"; padding-top: ",[0,80],"; background-color: red; }\n",],undefined,{path:"./pages/mall/mall.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/mall/mall.wxml') } }));

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "nav-t": "/components/nav/nav",
+    "cart": "/components/meun/cart"
+  }
+}

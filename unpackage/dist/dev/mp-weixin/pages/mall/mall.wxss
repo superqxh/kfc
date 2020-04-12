@@ -1,0 +1,39 @@
+
+.content.data-v-3584c4c9{
+}
+.box.data-v-3584c4c9{
+	position: relative;
+}
+.input-icon.data-v-3584c4c9{
+	position: absolute;
+	left: -30rpx;
+	top:-18rpx;
+	font-size: 40rpx;
+	color: #333;
+}
+.icon.data-v-3584c4c9{
+	color: #bf212e;
+	font-size: 40rpx;
+}
+.nav-input.data-v-3584c4c9{
+	width: 500rpx;
+	border: 1rpx solid #EEEEEE;
+	border-radius: 40rpx;
+	background-color: #FAFAFA;
+	padding-left:80rpx ;
+	margin-left: -60rpx;
+}
+.icon-cart.data-v-3584c4c9{
+	position: fixed;
+	top: 550px;
+	right: 70rpx;
+	font-size: 50rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	width: 80rpx;
+	background-color: rgba(0,0,0,0.6);
+	color: #ffffff;
+	border-radius: 50%;
+	text-align: center;
+}
+

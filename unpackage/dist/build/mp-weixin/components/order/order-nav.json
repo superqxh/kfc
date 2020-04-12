@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "oder-list": "/components/order/order-list"
+  }
+}

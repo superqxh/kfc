@@ -1,0 +1,39 @@
+
+.icon.data-v-27a9a8ae{
+	color: #8f212e;
+	font-size: 40rpx;
+	margin-left: 30rpx;
+}
+.icon-kf.data-v-27a9a8ae{
+	color: #8f212e;
+	font-size: 40rpx;
+	margin-left: 30rpx;
+}
+.box.data-v-27a9a8ae{
+	
+	margin-top: -5rpx;
+	margin-left: -80rpx;
+}
+.icon-d.data-v-27a9a8ae{
+	float: left;
+	height: 60rpx;
+	line-height: 60rpx;
+	color: #8f212e;
+}
+.text.data-v-27a9a8ae{
+	float: left;
+}
+.text-top.data-v-27a9a8ae{
+	font-size: 30rpx;
+	color: #8f212e;
+	height: 35rpx;
+	line-height: 35rpx;
+	font-weight: bold;
+}
+.text-bottom.data-v-27a9a8ae{
+	font-size: 18rpx;
+	color: #000000;
+	height: 25rpx;
+	line-height: 25rpx;
+}
+

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/confirm/confirm",
+    "pages/menu/menu",
+    "pages/payType/payType",
+    "pages/details/details",
+    "pages/mall/mall",
+    "pages/order/order",
+    "pages/personal/personal",
+    "pages/addAddress/addAddress",
+    "pages/orderDetail/orderDetail",
+    "pages/address/address",
+    "pages/updateAddress/updateAddress",
+    "pages/coupon/coupon"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "kfc",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "selectedColor": "#FF0000",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "iconPath": "static/img/tabbar/index.png",
+        "selectedIconPath": "static/img/tabbar/indexRed.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "static/img/tabbar/mall.png",
+        "selectedIconPath": "static/img/tabbar/mallRed.png",
+        "pagePath": "pages/mall/mall",
+        "text": "商城"
+      },
+      {
+        "iconPath": "static/img/tabbar/order.png",
+        "selectedIconPath": "static/img/tabbar/orderRed.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "iconPath": "static/img/tabbar/personal.png",
+        "selectedIconPath": "static/img/tabbar/personalRed.png",
+        "pagePath": "pages/personal/personal",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

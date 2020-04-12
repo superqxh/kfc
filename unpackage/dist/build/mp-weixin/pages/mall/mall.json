@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "uni-nav-bar": "/components/uni-nav-bar/uni-nav-bar",
+    "mall-swiper": "/components/mall/mall-swiper",
+    "mall-vgold": "/components/mall/mall-vgold",
+    "mall-icon": "/components/mall/mall-icon",
+    "mall-show": "/components/mall/mall-show",
+    "mall-top": "/components/mall/mall-top"
+  }
+}

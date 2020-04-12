@@ -1,0 +1,48 @@
+
+.content.data-v-d68d9346{
+	width: 100%;
+	height: 100%;
+	background-color: #FAFAFA;
+}
+.content-box.data-v-d68d9346{
+	margin: 40rpx 25rpx;
+	width: 700rpx;
+}
+.inp-box.data-v-d68d9346{
+	width:100% ;
+	position: relative;
+	margin-top: 30rpx;
+	margin-left: 25rpx;
+}
+.inp.data-v-d68d9346{
+	width: 600rpx;
+	height: 40rpx;
+	padding: 20rpx 0 20rpx 100rpx;
+	background-color: #FFFFFF;
+	font-size: 30rpx;
+}
+.icon-img.data-v-d68d9346{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 60rpx;
+	height: 60rpx;
+	padding: 10rpx 20rpx;
+}
+.btn.data-v-d68d9346{
+	margin-top:20rpx ;
+	width: 700rpx;
+	height: 80rpx;
+	font-size: 30rpx;
+	color: #FFFFFF;
+	background-color: #f04b3c;
+}
+.register.data-v-d68d9346{
+	margin-top: 10rpx;
+	text-align: right;
+	font-size: 30rpx;
+	color: #f04b3c;
+	font-weight: bold;
+	margin-right: 25rpx;
+}
+

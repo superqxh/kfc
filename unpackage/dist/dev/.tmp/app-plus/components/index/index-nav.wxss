@@ -1,0 +1,35 @@
+
+.content.data-v-77da779d{
+	background: #FFFFFF;
+}
+.header.data-v-77da779d{
+	background-color: red;
+	height: 80rpx;
+	padding-top: 80rpx;
+}
+.left.data-v-77da779d{
+	float: left;
+	overflow: hidden;
+}
+.img.data-v-77da779d{
+	height: 70rpx;
+	width: 70rpx; 
+	float: left;
+	margin: 0 30rpx;
+	border-radius:50% ;
+}
+.location-box.data-v-77da779d{
+	float: left;
+	height: 70rpx;
+}
+.city.data-v-77da779d{
+	height: 35rpx;
+	line-height: 35rpx;
+	font-size: 35rpx;
+}
+.location.data-v-77da779d{
+	height: 35rpx;
+	line-height: 35rpx;
+	font-size: 35rpx;
+}
+

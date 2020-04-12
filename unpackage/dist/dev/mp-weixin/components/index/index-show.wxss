@@ -1,0 +1,70 @@
+
+.content.data-v-15cfe41a{
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-top: 10rpx;
+	height: 700rpx;
+}
+.title-box.data-v-15cfe41a{
+	
+	height: 50rpx;
+	width: 400rpx;
+	margin: 0 auto;
+}
+.title-red-box.data-v-15cfe41a{
+	height: 50rpx;
+	width: 60rpx;
+	float: left;
+	margin: 0 auto;
+}
+.red-box.data-v-15cfe41a{
+	width: 60rpx;
+	height: 12rpx;
+	background-image: -webkit-linear-gradient(left,#f15913,#dc3225);
+	background-image: linear-gradient(to right,#f15913,#dc3225);
+	border-radius: 20rpx;
+	margin-top: 19rpx;
+}
+.title-text.data-v-15cfe41a{
+	height: 45rpx;
+	width: 220rpx;
+	float: left;
+	margin: 0 10rpx;
+	text-align: center;
+	line-height: 45rpx;
+}
+.main-img-box.data-v-15cfe41a{
+	width: 100%;
+	margin-top: 10rpx;
+}
+.main-img.data-v-15cfe41a{
+	width: 700rpx;
+	margin: 0 25rpx;
+	border-radius: 20rpx;
+	height: 300rpx;
+}
+.scroll-box.data-v-15cfe41a{
+	/*下面这两个好像必须加 */
+	-webkit-writing-mode:tb-lr ;
+	        writing-mode:tb-lr ;
+	-webkit-writing-mode: vertical-lr;
+	        writing-mode: vertical-lr;
+	
+	height: 270rpx;
+	/* overflow: auto; */
+	float: left;
+	border: none;
+}
+.secondary-img-box.data-v-15cfe41a{
+	float: left;
+	margin: 15rpx  20rpx;
+	-webkit-writing-mode: lr-tb;
+	        writing-mode: lr-tb;
+	display: inline-block;
+}
+.secondary-img.data-v-15cfe41a{
+	width: 260rpx;
+	height: 250rpx;
+	border-radius:20rpx ;
+}
+
